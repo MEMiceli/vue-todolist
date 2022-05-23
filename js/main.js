@@ -14,3 +14,31 @@
 // 2- cliccando sul testo dell'item, invertire il valore della proprietà done del todo corrispondente (se done era uguale a false, impostare true e viceversa)
 // Buon lavoro e buon divertimento!
 
+const app = new Vue({
+    el: '#root',
+    data: {
+        todos: [
+            {
+                text: 'imprecare',
+                done: true,
+            },
+            {
+                text: 'codificare',
+                done: false,
+            },
+            {
+                text: 'studiare',
+                done: false,
+            },
+        ],
+        newTodo: '',
+    },
+    methods: {
+        addTodo() {
+            if( this.newTodo !== '')
+                this.todos.push(this.newTodo);
+                this.newTodo = '';
+        },
+
+    },
+});

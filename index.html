@@ -6,11 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- css -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Vue -->
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
     <title>Document</title>
 </head>
 <body>
+    <header>
+        <h1>Todolist</h1>
+    </header>
+    <div class="container" id="root">
+        <div class="newtodo">
+            <input type="text" placeholder="Nuovo todo" v-model="newTodo">
+            <button @click="addTodo" >Aggiungi</button>
+        </div>
+        <form>
+            <ul>
+                <li v-for="obj in todos">{{obj.text}} <span class="box"><i class="fa-solid fa-x"></i></span></li>
+            </ul>
+        </form>
+    </div>
     <script src="js/main.js"></script>
 </body>
 </html>

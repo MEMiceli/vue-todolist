@@ -1,1 +1,16 @@
 /* da elaborare */
+header{
+    text-align: center;
+}
+.container{
+   max-width: 1000px;
+   margin:auto
+}
+.box{
+    border:2px solid black;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: right;
+    background-color: silver;
+}
